@@ -30,6 +30,7 @@ def load_saved_artifacts():
     print("loading saved artifacts..start")
     global __data_columns
     global __locations
+    
 
     with open("./artifacts/columns.json", 'r') as f:
         __data_columns = json.load(f)['data_columns']
@@ -40,6 +41,9 @@ def load_saved_artifacts():
         __model = pickle.load(f) 
 
     print("loading artifacts done")
+
+def get_data_columns():
+    return __data_columns
 
 
 if __name__ =="__main__":
